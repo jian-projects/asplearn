@@ -1,0 +1,57 @@
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - file.plm_dir: /home/Pretrained_Models/
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - file.data_dir: ./datasets//
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - file.save_dir: ./chockpoints///rest/
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - file.cache_dir: ./chockpoints///rest/
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - file.log: ./logs/rest/
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - file.record: ./records/rest/
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.show: False
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.tasks: ['absa/alsc', 'rest']
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.e_start: 0
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.epochs: 16
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.device: cuda
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.device_ids: [0]
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.do_test: False
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.do_valid: True
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.do_train: True
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.early_stop: 10
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.save_model: 0
+2024-08-25 15:22:37.440 | INFO     | processor:__init__:48 - train.log_step_rate: 1.0
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.log_step_rate_max: 3.0
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.seed: 2023
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.l2reg: 0.01
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.data_rate: 1.0
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.batch_size: 32
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.warmup_ratio: 0.3
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.weight_decay: 0.001
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.adam_epsilon: 1e-08
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.max_grad_norm: 5.0
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.learning_rate: 5e-05
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.learning_rate_pre: 5e-05
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.inference: True
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - train.wandb: 0
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.name: asplearn
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.framework: None
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.drop_rate: 0.1
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.epoch_before: False
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.epoch_every: False
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.epoch_after: False
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.arch: deberta
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.scale: base
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.threshold: 0.0
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.use_adapter: True
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.weight: 0.5
+2024-08-25 15:22:37.441 | INFO     | processor:__init__:48 - model.ret_num: 5
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - model.use_cl: -1
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - model.optim_sched: ['AdamW', 'linear']
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - model.plm: /home/Pretrained_Models/deberta-base
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - model.save_path: ./chockpoints///rest/rest-deberta-base.pt
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - model.sbert: /home/Pretrained_Models//sbert/all-distilroberta-v1
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - model.data_dir: ./chockpoints///rest/rest/
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - model.data: ./chockpoints///rest/rest/asplearn_for_all.pt
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - model.store_first: True
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - logger.params: <loguru.logger handlers=[(id=1, level=30, sink=<stdout>), (id=2, level=10, sink='./logs/rest/20240825_152234/params.log'), (id=3, level=10, sink='./logs/rest/20240825_152234/process.log')]>
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - logger.process: <loguru.logger handlers=[(id=1, level=30, sink=<stdout>), (id=2, level=10, sink='./logs/rest/20240825_152234/params.log'), (id=3, level=10, sink='./logs/rest/20240825_152234/process.log')]>
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:48 - logger.display: ['epochs', 'early_stop', 'batch_size', 'learning_rate_pre', 'seed', 'arch', 'scale', 'weight', 'ret_num']
+2024-08-25 15:22:37.442 | INFO     | processor:__init__:49 - 
+ ======================================================================================================================== 
+
