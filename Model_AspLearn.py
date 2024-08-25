@@ -89,7 +89,7 @@ def config_for_model(args, scale='base'):
     args.model['sbert'] = f"{args.file['plm_dir']}/sbert/{sbert}" # 
     args.model['data_dir'] = f"{args.file['cache_dir']}{args.train['tasks'][-1]}/"
     if not os.path.exists(args.model['data_dir']): os.makedirs(args.model['data_dir']) # 创建路径
-    args.model['data'] = args.model['data_dir']+f"{args.model['name']}_for_all.pt"
+    args.model['data'] = args.file['data_dir']+f"{args.train['tasks'][-1]}/{args.model['name']}_for_all.pt"
 
     # args.model['optim_sched'] = ['AdamW', 'linear']
     # args.model['optim_sched'] = ['AdamW', 'cosine']
@@ -107,13 +107,12 @@ def import_model(args):
     args = config_for_model(args) # 添加模型参数, 获取任务数据集
 
     ## 2. 数据集配置
-    data_path = args.model['data']
-    if os.path.exists(data_path):
-        dataset = torch.load(data_path)
-    else:
-        data_dir = f"{args.file['data_dir']}{args.train['tasks'][-1]}/"
-        dataset = ALSCDataModule_(data_dir,  args.train['batch_size'], num_workers=0)   
-    
+    dataset = torch.load(args.model['data'])
+    # if os.path.exists(data_path):
+    #     dataset = torch.load(data_path)
+    # else:
+    #     data_dir = f"{args.file['data_dir']}{args.train['tasks'][-1]}/"
+    #     dataset = ALSCDataModule_(data_dir,  args.train['batch_size'], num_workers=0)   
     tokenizer = AutoTokenizer.from_pretrained(args.model['plm'])
     dataset.setup_(tokenizer)
     dataset.tokenizer = tokenizer

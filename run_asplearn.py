@@ -61,7 +61,7 @@ def run(args):
 
 
 if __name__ == '__main__':
-    args = config(task='', dataset='twi', framework=None, model='asplearn')
+    args = config(task='', dataset='lap', framework=None, model='asplearn')
 
     ## 导入配置文件
     with open(f"./run_config/{args.model['name']}.yaml", 'r') as f:

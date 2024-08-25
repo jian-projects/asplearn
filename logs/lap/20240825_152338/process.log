@@ -1,2 +1,0 @@
-2024-08-25 15:23:42.674 | WARNING  | processor:print_trainable_parameters:30 - train: 7.68 M || all params: 146.29 M || trainable: 5.25 %
-2024-08-25 15:23:42.680 | WARNING  | processor:__init__:55 - epochs: 16, early_stop: 10, batch_size: 32, learning_rate_pre: 5e-05, seed: 2023, arch: deberta, scale: base, weight: 0.5, ret_num: 5, 
