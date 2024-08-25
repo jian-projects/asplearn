@@ -1,6 +1,6 @@
 
 ## cuda environment
-import warnings, logging, os, wandb, random, sys, yaml
+import warnings, logging, os, wandb, sys, yaml
 warnings.filterwarnings("ignore", category=UserWarning)
 logging.getLogger("transformers").setLevel(logging.ERROR)
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
@@ -79,23 +79,4 @@ if __name__ == '__main__':
         for seed in seeds:
             args.train['seed'] = seed
             record = run(args)
-            record_show.write(record, space=False) 
-
-    # args.model['weight'] = 0.0 ## 看看 base 啥情况
-
-    # seeds = []
-    # if seeds or args.train['inference']: # 按指定 seed 执行
-    #     if not seeds: seeds = [args.train['seed']]
-    #     recoed_path = f"{args.file['record']}{args.model['name']}_best.jsonl"
-    #     record_show = JsonFile(recoed_path, mode_w='a', delete=True)
-    #     for seed in seeds:
-    #         args.train['seed'] = seed
-    #         record = run(args)
-    #         record_show.write(record, space=False) 
-    # else: # 随机 seed 执行       
-    #     recoed_path = f"{args.file['record']}{args.model['name']}_search.jsonl"
-    #     record_show = JsonFile(recoed_path, mode_w='a', delete=True)
-    #     for c in range(100):
-    #         args.train['seed'] = random.randint(1000,9999)+c
-    #         record = run(args)
-    #         record_show.write(record, space=False)
+            record_show.write(record, space=False)

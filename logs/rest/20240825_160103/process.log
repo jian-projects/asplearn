@@ -1,0 +1,3 @@
+2024-08-25 16:01:06.904 | WARNING  | processor:print_trainable_parameters:30 - train: 7.68 M || all params: 117.17 M || trainable: 6.56 %
+2024-08-25 16:01:06.909 | WARNING  | processor:__init__:55 - epochs: 16, early_stop: 10, batch_size: 32, learning_rate_pre: 5e-05, seed: 2023, arch: bert, scale: base, weight: 0.5, ret_num: 5, 
+2024-08-25 16:01:16.192 | INFO     | utils_model:on_test_end:139 - test: {"f1": 0.832, "acc": 0.8366, "loss": 0.567, "epoch": 0.0}

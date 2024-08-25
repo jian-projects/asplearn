@@ -113,20 +113,8 @@ def import_model(args):
     else:
         data_dir = f"{args.file['data_dir']}{args.train['tasks'][-1]}/"
         dataset = ALSCDataModule_(data_dir,  args.train['batch_size'], num_workers=0)   
-        # sbert = SentenceTransformer(args.model['sbert'])
-        # aspect_count(dataset, sbert)
-        torch.save(dataset, data_path)
     
-    if args.model['arch'] == 'glove':
-        sys.path.append(f"{args.file['plm_dir']}glove/")
-        from tokenizer import GloveTokenizer
-        tokenizer_glove = f"{args.file['data_dir']}{args.train['tasks'][-1]}/glove.tokenizer"
-        if not os.path.exists(tokenizer_glove): 
-            words = [sample['tokens'] for sample in dataset.datas['train']]
-            tokenizer = GloveTokenizer(words, glove_file=args.file['plm_dir']+'glove/glove.840B.300d.txt')
-            torch.save(tokenizer, tokenizer_glove)
-        else: tokenizer = torch.load(tokenizer_glove)
-    else: tokenizer = AutoTokenizer.from_pretrained(args.model['plm'])
+    tokenizer = AutoTokenizer.from_pretrained(args.model['plm'])
     dataset.setup_(tokenizer)
     dataset.tokenizer = tokenizer
     dataset.batch_cols = {
