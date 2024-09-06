@@ -1,10 +1,12 @@
 records/
 logs/
 checkpoints/lap/lap-deberta-large-cl*
-checkpoints/rest/rest-deberta-large-cc*
-checkpoints/twi/twi-deberta-large-cc*
+checkpoints/rest/rest-deberta-large-cl*
+checkpoints/twi/twi-deberta-large-cl*
 
 p_test.py
 llm_results.py
 case_study.py
 run_asplearn_llm.py
+asplearn_llm_gpt.py
+asplearn_llm_llama.py
