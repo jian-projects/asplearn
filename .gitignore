@@ -3,6 +3,9 @@ logs/
 checkpoints/lap/lap-deberta-large-cl*
 checkpoints/rest/rest-deberta-large-cl*
 checkpoints/twi/twi-deberta-large-cl*
+datasets/lap/gpt-*
+datasets/rest/gpt-*
+datasets/twi/gpt-*
 
 p_test.py
 llm_results.py
