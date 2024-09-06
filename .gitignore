@@ -1,8 +1,9 @@
-./records
-./logs
+./records/
+./logs/
 ./checkpoints/lap/lap-deberta-large-cl*
 ./checkpoints/rest/rest-deberta-large-cc*
 ./checkpoints/twi/twi-deberta-large-cc*
+
 ./p_test.py
 ./llm_results.py
 ./case_study.py
