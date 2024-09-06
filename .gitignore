@@ -1,3 +1,4 @@
+datasets/
 records/
 logs/
 checkpoints/lap/lap-deberta-large-cl*
