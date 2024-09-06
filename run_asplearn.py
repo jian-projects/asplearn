@@ -31,7 +31,8 @@ def run(args):
     # train or eval the model
     processor = Processor(args, model, dataset)
     if args.train['inference']:
-        save_path = args.model['save_path'] + '.ckpt'
+        # save_path = args.model['save_path'] + '.ckpt'
+        save_path = f"./checkpoints/{args.train['tasks'][-1]}/{args.train['tasks'][-1]}-{args.model['arch']}-large-cl-0.pt"
         processor.model.save_checkpoint_peft(save_path=save_path, mode='load')
         result = processor._evaluate(stage='test')
         print(result)
@@ -61,17 +62,18 @@ def run(args):
 
 
 if __name__ == '__main__':
-    args = config(task='', dataset='lap', framework=None, model='asplearn')
+    args = config(task='', dataset='twi', framework=None, model='asplearn')
 
     ## 导入配置文件
-    with open(f"./run_config/{args.model['name']}.yaml", 'r') as f:
+    with open(f"./run_config/{args.model['name']}_{args.train['tasks'][-1]}.yaml", 'r') as f:
         run_config = yaml.safe_load(f)
     args.train.update(run_config['train'])
     args.model.update(run_config['model'])
     args.logger['display'].extend(['arch', 'scale', 'weight', 'ret_num'])
 
+    # args.model['arch'] = 'bert'
     args.train['inference'] = True
-    seeds = [2023, 2024, 2025]
+    seeds = [2023]
     if seeds or args.train['inference']: # 按指定 seed 执行
         if not seeds: seeds = [args.train['seed']]
         recoed_path = f"{args.file['record']}{args.model['name']}_best_tmp.jsonl"

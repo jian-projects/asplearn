@@ -285,6 +285,8 @@ class BaseForALSC(ModelForClassification):
             self.get_ret_features(inputs, outputs, mode='store') # 存储表示
 
         return {
+            'idxs': inputs['index'].cpu(),
+            'features':    outputs['cls'].detach().cpu(),
             'loss':   loss,
             'logits': logits,
             'preds':  torch.argmax(logits, dim=-1).cpu(),

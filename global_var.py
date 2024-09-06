@@ -7,5 +7,5 @@ utils_dir = root_dir + 'utils/' # 训练代码位置目录
 
 ## server paths
 plm_dir = '/home/Pretrained_Models/'
-cache_dir = './chockpoints/'
-save_dir = './chockpoints/'
+cache_dir = './checkpoints/'
+save_dir = './checkpoints/'

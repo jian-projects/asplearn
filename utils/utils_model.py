@@ -138,7 +138,8 @@ class ModelForClassification(pl.LightningModule):
         describe = json.dumps({k: round(float(v),4) for k,v in metrics_te.items()})
         self.args.logger['process'].info(f"test: {describe}")
 
-        # metrics_te['outputs'] = outputs # 保存输出结果
+        # for output in outputs: del output['loss']; del output['logits']
+        # torch.save({'in': self.dataset.datas, 'out': outputs}, f"./checkpoints/{self.args.train['tasks'][-1]}/deberta.output.cl.pt")
 
 
 class ModelForGeneration(pl.LightningModule):

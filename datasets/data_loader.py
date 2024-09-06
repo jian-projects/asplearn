@@ -27,9 +27,9 @@ class ALSCDataModule(Dataset):
         truthes = np.concatenate([rec['labels'].cpu().numpy() for rec in results])
         losses = [rec['loss'].item() for rec in results]
 
-        score_f1 = round(f1_score(truthes, preds, average='weighted'), 4)
+        score_f1 = round(f1_score(truthes, preds, average='macro'), 4)
         score_acc = round(accuracy_score(truthes, preds), 4)
-        score_loss = round(sum(losses)/len(losses), 3)
+        score_loss = round(sum(losses)/len(losses), 4)
 
         return {
             'f1'  : score_f1,
